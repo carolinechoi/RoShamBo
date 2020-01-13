@@ -30,6 +30,21 @@ public class RockPaperScissors
   	// returns third line of output i.e. who wins and why
 	{
 		String winner="";
+		if(playChoice.equals(compChoice))
+			winner = "!Draw game!";
+		else if(playChoice == "R" && compChoice == "S")
+			winner = "!Player wins <<Rock Breaks Scissors>>!";
+		else if(playChoice == "S" && compChoice == "P")
+			winner = "!Player wins <<Scissors Cuts Paper>>!";
+		else if(playChoice == "P" && compChoice == "R")
+			winner = "!Player wins <<Paper Covers Rock>>!";
+		else if(compChoice == "S")
+			winner = "!Computer wins <<Scissors Cuts Paper>>!";
+		else if(compChoice == "R")
+			winner = "!Computer wins <<Rock Breaks Scissors>>!";
+		else if(compChoice == "P")
+			winner = "!Computer wins <<Paper Covers Rock>>!";
+		
 		return winner;
 	}
 
