@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import static java.lang.System.*;
 
-public class RockAlwaysWins
+public class RockPaperScissors
 {
 	private String playChoice;
 	private String compChoice;
