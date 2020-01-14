@@ -1,30 +1,24 @@
-import java.util.Scanner;
-import static java.lang.System.*;
-
 public class RockPaperScissors
 {
 	private String playChoice;
 	private String compChoice;
 
 	public RockPaperScissors()
-		// could use this("");??????????????????????
-  	// set playChoice = compChoice = ""
 	{
-		playChoice = "";
+		this("");
 		compChoice = "";
 	}
 
 	public RockPaperScissors(String player) 
-  	// what constructors do: set the instance vars. populate playChoice from the input, compchoice randomly
 	{
 		playChoice = player;
-		double num = Math.random()*3;
+		int num = (int)(Math.random()*3);
 		if(num == 0)
 			compChoice = "S";
 		if(num == 1)
 			compChoice = "R";
 		if(num == 2)
-			compChoice = "P";
+			compChoice = "P";	
 	}
 
 	public String determineWinner()
@@ -33,19 +27,18 @@ public class RockPaperScissors
 		String winner="";
 		if(playChoice.equals(compChoice))
 			winner = "!Draw game!";
-		else if(playChoice == "R" && compChoice == "S")
+		else if(playChoice.equals("R") && compChoice.equals("S"))
 			winner = "!Player wins <<Rock Breaks Scissors>>!";
-		else if(playChoice == "S" && compChoice == "P")
+		else if(playChoice.equals("S") && compChoice.equals("P"))
 			winner = "!Player wins <<Scissors Cuts Paper>>!";
-		else if(playChoice == "P" && compChoice == "R")
+		else if(playChoice.equals("P") && compChoice.equals("R"))
 			winner = "!Player wins <<Paper Covers Rock>>!";
-		else if(compChoice == "S")
+		else if(compChoice.equals("S"))
 			winner = "!Computer wins <<Scissors Cuts Paper>>!";
-		else if(compChoice == "R")
+		else if(compChoice.equals("R"))
 			winner = "!Computer wins <<Rock Breaks Scissors>>!";
-		else if(compChoice == "P")
+		else if(compChoice.equals("P"))
 			winner = "!Computer wins <<Paper Covers Rock>>!";
-		
 		return winner;
 	}
 

@@ -1,20 +1,23 @@
-import java.util.scanner;
+import java.util.Scanner;
 
 public class Tester
 {
   public static void main(String[] args)
-  {
-    RockPaperScissors rps = RockPaperScissors();
-    
+  {    
     String theirInput = "";
-    Scanner kb = Scanner(System.in);
-    while(theirInput != "n")
+    while(!theirInput.equals("n"))
     {
+      Scanner kb = new Scanner(System.in);
       System.out.print("Rock-Paper-Scissors - pick your weapon[R,P,S]:: ");
       theirInput = kb.next();
-      rps.RockPaperScissors(theirInput);
+
+      RockPaperScissors rps = new RockPaperScissors(theirInput);
+      System.out.println(rps.toString());
+      System.out.println(rps.determineWinner());
+      
       System.out.print("\nDo you want to play again? ");
-      // theirInput = kb.next();
+      theirInput = kb.next();
+      System.out.println("");
     }
   }
 }
