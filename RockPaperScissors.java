@@ -21,9 +21,26 @@ public class RockPaperScissors
 			compChoice = "P";	
 	}
 
+	public String determineWinner2()
+  	{
+	    String winner="";
+	    if(playChoice.equals(compChoice))
+		    winner = "!Draw game!";
+	    else if(playChoice.equals("R") && compChoice.equals("S"))
+		    winner = "!Player wins <<Rock Breaks Scissors>>!";
+	    else if(playChoice.equals("S") && compChoice.equals("P"))
+		    winner = "!Player wins <<Scissors Cuts Paper>>!";
+	    else if(playChoice.equals("P") && compChoice.equals("R"))
+		    winner = "!Player wins!";
+	  	else 
+			winner = "!Computer wins!";
+		return winner;
+  	}
+
 	public String determineWinner()
   	// returns third line of output i.e. who wins and why
 	{
+		// ideas: make a pairings list and check against them?
 		String winner="";
 		if(playChoice.equals(compChoice))
 			winner = "!Draw game!";

@@ -12,8 +12,8 @@ public class Tester
       theirInput = kb.next();
 
       RockPaperScissors rps = new RockPaperScissors(theirInput);
-      System.out.println(rps.toString());
-      System.out.println(rps.determineWinner());
+      System.out.println(rps);
+      System.out.println(rps.determineWinner2());
       
       System.out.print("\nDo you want to play again? ");
       theirInput = kb.next();
